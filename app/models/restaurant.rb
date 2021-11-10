@@ -1,4 +1,6 @@
 class Restaurant < ApplicationRecord
+  CATEGORIES = %w[Chinese Italian Japanese French Belgian]
+
   has_many :reviews, dependent: :destroy
 
   validates :name, :address, :category, presence: true
